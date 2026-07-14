@@ -18,12 +18,11 @@ corpus = """
 new_corpus = corpus.split()
 print(new_corpus)
 
-# Create tokens ONCE, with a boundary marker after each word
 abc = []
 for word in new_corpus:
     for letter in word:
         abc.append(letter)
-    abc.append(" ")  # boundary marker so words don't merge into each other
+    abc.append(" ") 
 
 while True:
 
@@ -72,7 +71,6 @@ while True:
             new_tokens.append(abc[i])
             i += 1
 
-    # IMPORTANT: keep the merged tokens
     abc = new_tokens
 
 print("\nFinal tokens:")
